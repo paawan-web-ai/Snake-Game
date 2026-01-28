@@ -35,6 +35,9 @@ html, body {
     --border-radius-lg:16px;
     --border-radius-xl:20px;
     --border-radius-2xl:24px;
+
+    /* snake color */
+    --fill-color:rgb(236, 91, 65);
 }
 
 html{
@@ -70,12 +73,14 @@ section .infos{
     border: 1px solid var(--border-primary-color);
     flex-grow:1 ;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(30px,1fr));
-    grid-template-rows: repeat(auto-fill,minmax(30px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
 }
 
 .block{
-    width: 30px;
-    height: 30px;
     border: 1px solid var(--border-primary-color);
+}
+
+.fill{
+  background-color: var(--fill-color);
 }
