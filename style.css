@@ -65,6 +65,7 @@ section .infos{
     border-radius: var(--border-radius-sm);
 }
 
+
 .board{
     border: 1px solid var(--border-primary-color);
     flex-grow:1 ;
