@@ -38,6 +38,9 @@ html, body {
 
     /* snake color */
     --fill-color:rgb(236, 91, 65);
+
+    /* food color */
+    --food-color:white;
 }
 
 html{
@@ -83,4 +86,8 @@ section .infos{
 
 .fill{
   background-color: var(--fill-color);
+}
+
+.food{
+    background-color: var(--food-color);
 }
