@@ -54,13 +54,22 @@ function render(){
     }
 
      
-    // if(head.x==food.x && head.y==food.y){
-
-    // }
+    if(head.x==food.x && head.y==food.y){
+        blocks[`${food.x}-${food.y}`].classList.remove("food")
+        food = {
+            x: Math.floor(Math.random()*rows) , y: Math.floor(Math.random()*cols)
+        }
+         blocks[`${food.x}-${food.y}`].classList.add("food")
+        
+         snake.unshift(head)
+    }
 
 
     snake.forEach(segment=>{
         blocks[`${segment.x}-${segment.y}`].classList.remove("fill")
+        
+
+let direction = 'up'
     })
 
     snake.unshift(head)
@@ -73,11 +82,7 @@ function render(){
 
 
 
-intervalId = setInterval(() => {
-    
-    render()
- 
-}, 400);
+
 
 addEventListener("keydown",(event)=>{
     if(event.key === "ArrowUp"){
@@ -89,4 +94,17 @@ addEventListener("keydown",(event)=>{
     }else if(event.key ==="ArrowDown"){
         direction="down"
     }
+})
+
+
+let startGame = document.querySelector(".btn-start")
+let modal = document.querySelector(".modal")
+
+startGame.addEventListener('click',()=>{
+    modal.style.display="none"
+    intervalId = setInterval(() => {
+    
+    render()
+ 
+}, 300);
 })
